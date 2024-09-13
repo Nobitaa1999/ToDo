@@ -49,23 +49,27 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Todo App</h1>
-      <div className="input-section">
+      <h1 className="app-title">Todo List</h1>
+      <div className="input-container">
         <input
           type="text"
           value={task}
           onChange={(e) => setTask(e.target.value)}
-          placeholder="Enter a task"
+          placeholder="Add a new task..."
+          className="task-input"
         />
-        <button onClick={addTask}>Add Task</button>
+        <button onClick={addTask} className="add-button">Add</button>
       </div>
-      <ul>
+      <ul className="task-list">
         {tasks.map((task) => (
-          <li key={task._id} className={task.completed ? "completed" : ""}>
-            <span onClick={() => toggleCompleteTask(task._id, task.completed)}>
+          <li key={task._id} className={`task-item ${task.completed ? "completed" : ""}`}>
+            <span 
+              onClick={() => toggleCompleteTask(task._id, task.completed)} 
+              className="task-text"
+            >
               {task.text}
             </span>
-            <button onClick={() => deleteTask(task._id)}>Delete</button>
+            <button onClick={() => deleteTask(task._id)} className="delete-button">Delete</button>
           </li>
         ))}
       </ul>

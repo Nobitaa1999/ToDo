@@ -1,43 +1,90 @@
+/* App.css */
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: auto;
   padding: 20px;
+  background-color: #f4f4f9;
 }
 
-input {
+.app-title {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.task-input {
   padding: 10px;
   font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  width: 70%;
+  max-width: 400px;
 }
 
-button {
+.add-button {
   padding: 10px 20px;
   font-size: 16px;
   margin-left: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-ul {
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+.task-list {
   list-style: none;
   padding: 0;
 }
 
-li {
-  margin: 10px 0;
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
 }
 
-li button {
-  margin-left: 20px;
+.task-item:hover {
+  background-color: #f1f1f1;
+}
+
+.task-text {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.delete-button {
   padding: 5px 10px;
-  background-color: red;
+  font-size: 14px;
+  background-color: #dc3545;
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-li span {
-  cursor: pointer;
-}
-
-li.completed span {
-  text-decoration: line-through;
-  color: grey;
+.delete-button:hover {
+  background-color: #c82333;
 }
